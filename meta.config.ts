@@ -3,9 +3,9 @@
 import { Metadata } from "next";
 import { isDevelopment } from "./lib/utils";
 
-const siteTitle = "Chromakopia Font Generator | Create Stylish Text & Custom Fonts Online";
+const siteTitle = "Chromakopia Font Generator";
 const siteTitleTemplate = "Chromakopia Font Generator";
-const siteDescription = "Create unique and stylish text with Chromakopia Font Generator. Transform plain text into beautiful custom fonts for social media, PFP, names and more. Free and easy to use online tool.";
+const siteDescription = "Chromakopia Font Generator is your free online tool for creating custom text and name designs. Transform text into beautiful images with Chromakopia Font Generator. Perfect for PFP, social media posts, and lyrics visualization.";
 
 export const siteUrl = isDevelopment() ? "http://localhost:3000" : "https://chromakopia-font-generator.github.io";
 
@@ -45,6 +45,33 @@ export const metaConfig: Metadata = {
     },
     manifest: `${siteUrl}/site.webmanifest`,
 };
+
+export function getAboutMetaConfig(): Metadata {
+    const title = "About Chromakopia Font Generator";
+    const description = "About for Chromakopia Font Generator"
+    return {
+        title: title,
+        description: description,
+        alternates: {
+            canonical: `${siteUrl}/terms`,
+        },
+        openGraph: {
+            title: `${title} | ${siteTitleTemplate}`,
+            description: description,
+            url: `${siteUrl}/terms`,
+            siteName: siteTitle,
+            images: [
+                {
+                    url: `${siteUrl}/logo.svg`,
+                    width: 512,
+                    height: 512,
+                    alt: siteTitle,
+                },
+            ],
+            type: 'website',
+        }
+    }
+}
 
 export function getTermsMetaConfig(): Metadata {
     const title = "Terms of Service";

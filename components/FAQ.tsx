@@ -3,43 +3,35 @@ const FAQ = () => {
     const faqList = [
         {
             question: "What is Chromakopia Font Generator?",
-            answer: "Chromakopia Font Generator is a free online tool that helps you create beautiful text images. Simply type your text into Chromakopia, customize the style, colors, and background, and get a shareable image instantly. Chromakopia is perfect for creating social media posts, profile pictures, and creative visual content."
+            answer: "Chromakopia Font Generator is a specialized online tool that transforms text into beautiful images. It can generate Chromakopia names, PFP (profile pictures), lyrics visualizations, and custom text designs. With Chromakopia Font Generator, you can create unique visual content instantly without any design skills."
         },
         {
-            question: "How to use Chromakopia Font Generator?",
-            answer: "Using Chromakopia Font Generator is simple: 1. Type your text into Chromakopia's input box 2. Use Chromakopia's style options to customize your text color and style 3. Choose a background color or upload your own image to Chromakopia 4. Preview your design in real-time 5. Download your Chromakopia creation or share it directly to social media. No design skills needed!"
+            question: "How to create a Chromakopia name?",
+            answer: "Creating a Chromakopia name is simple: Enter your name in Chromakopia Font Generator, customize the style and colors to match your preference, and instantly get your unique Chromakopia name design. Perfect for making your social media profiles stand out."
         },
         {
-            question: "What customization options are available in Chromakopia?",
-            answer: "Chromakopia Font Generator offers multiple customization options: text color, font style, background color, and custom background image upload. Every change you make in Chromakopia is previewed in real-time, allowing you to perfect your design. Chromakopia's intuitive interface makes it easy to create exactly what you envision."
+            question: "Can I use Chromakopia Font Generator for PFP?",
+            answer: "Yes! Chromakopia Font Generator is perfect for creating PFP (Profile Pictures). Enter your text or initials in Chromakopia Font Generator, choose your preferred style, and create a unique PFP instantly. Many users love using Chromakopia for their social media profile pictures."
         },
         {
-            question: "Can I download the images I create with Chromakopia?",
-            answer: "Yes! All images you create with Chromakopia can be downloaded instantly in high quality. Simply click the download button in Chromakopia once you're happy with your design. Images created with Chromakopia Font Generator are perfect for social media, digital platforms, or personal use."
+            question: "How to visualize lyrics using Chromakopia?",
+            answer: "Chromakopia Font Generator makes lyrics visualization easy. Simply paste your lyrics into Chromakopia Font Generator, customize the style and background, and transform your favorite lyrics into stunning visual content. Perfect for sharing music quotes on social media."
         },
         {
-            question: "How can I share my Chromakopia creations?",
-            answer: "You can share your Chromakopia creations directly from our platform to social media, or download and share them manually. Each image made with Chromakopia comes with easy sharing options. Chromakopia Font Generator makes it simple to post your creations anywhere you want."
+            question: "What makes Chromakopia Font Generator unique?",
+            answer: "Chromakopia Font Generator specializes in creating visual text content like Chromakopia names, PFP, and lyrics. Unlike regular text generators, Chromakopia Font Generator provides instant image output, custom styling options, and easy sharing features all in one tool."
+        },
+        {
+            question: "How do I save and share my Chromakopia designs?",
+            answer: "Every design you create with Chromakopia Font Generator can be instantly downloaded as an image. You can also share your Chromakopia text designs, names, and PFP directly to social media platforms right from the generator."
         },
         {
             question: "Is Chromakopia Font Generator free to use?",
-            answer: "Yes, Chromakopia Font Generator is completely free to use. All of Chromakopia's features including text customization, background options, downloading, and sharing are available to everyone at no cost. You can use Chromakopia as much as you want without any charges."
+            answer: "Yes, Chromakopia Font Generator is completely free to use. You can create unlimited Chromakopia names, PFP, text designs, and lyrics visualizations without any cost. No registration or account needed."
         },
         {
-            question: "Can I use my own background image in Chromakopia?",
-            answer: "Yes! Chromakopia Font Generator allows you to upload your own background image to create truly unique designs. Chromakopia supports common image formats like JPG and PNG. Just make sure you have the rights to use any images you upload to Chromakopia."
-        },
-        {
-            question: "What image format will I receive from Chromakopia?",
-            answer: "Your Chromakopia creations are downloaded in high-quality PNG format, ensuring clarity and maintaining transparency where applicable. Images generated by Chromakopia Font Generator are optimized for social media and digital use while maintaining professional quality."
-        },
-        {
-            question: "Does Chromakopia Font Generator work on mobile devices?",
-            answer: "Yes, Chromakopia Font Generator is fully mobile-responsive. You can create, customize, download, and share Chromakopia images directly from your smartphone or tablet. Chromakopia's interface adapts to your screen size for the best experience."
-        },
-        {
-            question: "Are there any size limits for images in Chromakopia?",
-            answer: "The images generated by Chromakopia are optimized for social media use while maintaining high quality. For custom background uploads to Chromakopia Font Generator, we recommend using images under 5MB for the best performance. Chromakopia ensures your final images look great regardless of size."
+            question: "Can I customize my Chromakopia text designs?",
+            answer: "Absolutely! Chromakopia Font Generator offers various customization options. You can adjust colors, choose different styles, add backgrounds, and modify other elements to make your Chromakopia text designs unique."
         }
     ];
 

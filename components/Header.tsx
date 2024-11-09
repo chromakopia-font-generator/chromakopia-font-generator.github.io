@@ -10,7 +10,7 @@ const Header = () => {
             <div className="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
                 <Link href="/" className="flex items-center">
                     <Image
-                        src="/logo.png"
+                        src="/logo.svg"
                         alt="Chromakopia Font Generator Icon"
                         width={32}
                         height={32}

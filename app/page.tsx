@@ -25,7 +25,7 @@ export default function Home() {
           Chromakopia Font Generator
         </h1>
         <p className="text-lg">
-          Welcome to Chromakopia Font Generator! Transform your regular text into beautiful, stylish fonts instantly. Perfect for social media posts, profile pictures, and creative names.
+          Use Chromakopia Font Generator to create stunning Chromakopia names, PFP, and text designs instantly.
         </p>
       </section>
 
@@ -37,10 +37,6 @@ export default function Home() {
         <div className="max-w-3xl mx-auto">
           <YouTubeEmbed videoid="dL6LM4DyzU8" />
         </div>
-      </section>
-
-      <section>
-        <UseCases />
       </section>
 
       <section>

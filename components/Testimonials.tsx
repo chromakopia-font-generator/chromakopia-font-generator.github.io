@@ -3,39 +3,39 @@ const Testimonials = () => {
 
     const testimonials = [
         {
-            name: "Jessica M.",
-            role: "Instagram Influencer",
-            comment: "I've tried many text generators, but Chromakopia Font Generator is by far the best! The way it instantly creates beautiful text images is amazing. I use it for all my Instagram stories and posts now. The custom background feature and color options really make my content pop! 💯",
+            name: "Tyler M.",
+            role: "Content Creator",
+            comment: "Chromakopia Font Generator is amazing for creating custom PFP! I've generated dozens of profile pictures using Chromakopia, and they all look unique and professional. Best PFP generator I've found!",
+            platform: "Social Media"
+        },
+        {
+            name: "Sarah K.",
+            role: "Music Enthusiast",
+            comment: "I love using Chromakopia Font Generator for lyrics visualization. The way Chromakopia transforms song lyrics into beautiful images is perfect for sharing my favorite music quotes.",
             platform: "Instagram"
         },
         {
             name: "Alex Chen",
-            role: "Digital Content Creator",
-            comment: "Chromakopia Font Generator changed my content game completely! I can create professional-looking text images in seconds. The ability to generate and preview different styles instantly saves me hours of work. Best text to image generator I've found! 🚀",
-            platform: "YouTube"
+            role: "Streamer",
+            comment: "Chromakopia Font Generator helps me create awesome Chromakopia names for my social profiles. The text designs are unique and eye-catching. It's my go-to name generator now!",
+            platform: "Multiple Platforms"
         },
         {
-            name: "Maria R.",
-            role: "Social Media Manager",
-            comment: "Using Chromakopia Font Generator for all our brand's social media posts. Love how I can upload our own backgrounds and match our brand colors perfectly. The text images look incredibly professional, and it takes just seconds to create them! ⭐",
-            platform: "Facebook & Instagram"
+            name: "Emily R.",
+            role: "Social Media User",
+            comment: "Making custom PFP with Chromakopia Font Generator is so easy! I love how quickly I can create and customize my profile pictures. Chromakopia's text designs are always stunning.",
+            platform: "Twitter & Instagram"
         },
         {
-            name: "Chris Thompson",
-            role: "YouTuber",
-            comment: "This font generator is a game-changer! The text-to-image feature is super smooth, and the quality is perfect for YouTube thumbnails. I love how Chromakopia lets me preview different styles instantly. Definitely my go-to tool now! 🎥",
-            platform: "YouTube"
-        },
-        {
-            name: "Sarah Kim",
-            role: "Brand Designer",
-            comment: "Finally found the perfect text generator! Chromakopia Font Generator gives me the creative freedom I need with its customization options. The image quality is fantastic, and the sharing options make my workflow so much smoother. 🎨",
+            name: "James L.",
+            role: "Digital Artist",
+            comment: "As someone who frequently needs to create text images, Chromakopia Font Generator is a game-changer. The ability to generate unique Chromakopia text designs instantly is invaluable.",
             platform: "Various Platforms"
         },
         {
-            name: "Marcus J.",
-            role: "Business Owner",
-            comment: "As someone who needs to create quick promotional images, Chromakopia Font Generator is a lifesaver! The text-to-image conversion is instant, and the results always look professional. Plus, being able to use my own backgrounds is fantastic! 💪",
+            name: "Mia H.",
+            role: "Student",
+            comment: "I discovered Chromakopia Font Generator when looking for a name generator, and wow! The text designs are beautiful, and it's so easy to use. Now I use Chromakopia for all my social media content.",
             platform: "Social Media"
         }
     ];
