@@ -34,9 +34,9 @@ export default function AboutPage() {
 
             <h2>Contact Us</h2>
             <p>
-                Questions or suggestions? Email us at{' '}
-                <a href="mailto:contact@chromakopia-font-generator.com">
-                    contact@chromakopia-font-generator.com
+                Questions or suggestions? Please open an issue on our{' '}
+                <a href="https://github.com/chromakopia-font-generator/chromakopia-font-generator.github.io/issues" target="_blank" rel="noopener noreferrer">
+                    GitHub repository
                 </a>
             </p>
         </div>

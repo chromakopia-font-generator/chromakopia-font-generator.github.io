@@ -43,8 +43,10 @@ export default function TermsPage() {
 
             <h2>6. Contact</h2>
             <p>
-                For questions about these terms, contact us at{' '}
-                <a href="mailto:contact@chromakopia-font-generator.com">contact@chromakopia-font-generator.com</a>
+                For questions about these terms, Please open an issue on our{' '}
+                <a href="https://github.com/chromakopia-font-generator/chromakopia-font-generator.github.io/issues" target="_blank" rel="noopener noreferrer">
+                    GitHub repository
+                </a>
             </p>
 
             <p className="text-sm text-gray-600 mt-8">
