@@ -91,7 +91,7 @@ const FontGenerator = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let processedWord = word.trim().replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '').toUpperCase();
+    const processedWord = word.trim().replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '').toUpperCase();
     if (!processedWord) return;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
