@@ -91,17 +91,17 @@ const FontGenerator = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const processedWord = word.trim().replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '').toUpperCase();
+    let processedWord = word.trim().replace(/^[^a-zA-Z0-9]+|[^a-zA-Z0-9]+$/g, '').toUpperCase();
+    if (!processedWord) return;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    const fontsize2 = 100;
-    const fontsize1 = fontsize2 * 2.5;
-    const fontsize3 = fontsize2 * 2.5;
-    const padding = 50;
-
+    // 设置画布大小
     canvas.width = canvas.height = 500;
+    const padding = 40; // 文字到边缘的padding
+    const maxWidth = canvas.width - (padding * 2); // 文字最大宽度
 
+    // 处理只有背景图的情况
     if (uploadedBgImage && processedWord.length < 2) {
       ctx.drawImage(uploadedBgImage, 0, 0, canvas.width, canvas.height);
       if (!isBgTransparent) {
@@ -114,21 +114,47 @@ const FontGenerator = () => {
       return;
     }
 
+    // 分离字母
     const firstLetter = processedWord.charAt(0);
     const middleLetters = processedWord.slice(0, -1);
     const lastLetter = processedWord.charAt(processedWord.length - 1);
 
-    ctx.font = `${fontsize1}px ${type1.style.fontFamily}`;
-    const firstLetterWidth = ctx.measureText(firstLetter).width;
+    // 初始字体大小
+    let baseFontSize = 100;
+    let fontSize1 = baseFontSize * 2.5;
+    let fontSize2 = baseFontSize;
+    let fontSize3 = baseFontSize * 2.5;
 
-    ctx.font = `${fontsize2}px ${type2.style.fontFamily}`;
-    const middleLettersWidth = ctx.measureText(middleLetters).width;
+    // 计算总宽度的函数
+    const calculateTotalWidth = (size1: number, size2: number, size3: number) => {
+      ctx.font = `${size1}px ${type1.style.fontFamily}`;
+      const width1 = ctx.measureText(firstLetter).width;
 
-    ctx.font = `${fontsize3}px ${type3.style.fontFamily}`;
-    const lastLetterWidth = ctx.measureText(lastLetter).width;
+      ctx.font = `${size2}px ${type2.style.fontFamily}`;
+      const width2 = middleLetters ? ctx.measureText(middleLetters).width : 0;
 
-    const totalTextWidth = firstLetterWidth + middleLettersWidth + lastLetterWidth + 53;
+      ctx.font = `${size3}px ${type3.style.fontFamily}`;
+      const width3 = ctx.measureText(lastLetter).width;
 
+      return {
+        total: width1 + width2 + width3 + padding, // 添加字母间距
+        width1,
+        width2,
+        width3
+      };
+    };
+
+    // 调整字体大小直到文字适合画布
+    let widths = calculateTotalWidth(fontSize1, fontSize2, fontSize3);
+    while (widths.total > maxWidth && baseFontSize > 10) {
+      baseFontSize -= 5;
+      fontSize1 = baseFontSize * 2.5;
+      fontSize2 = baseFontSize;
+      fontSize3 = baseFontSize * 2.5;
+      widths = calculateTotalWidth(fontSize1, fontSize2, fontSize3);
+    }
+
+    // 绘制背景
     if (uploadedBgImage) {
       const imgWidth = uploadedBgImage.width;
       const imgHeight = uploadedBgImage.height;
@@ -155,21 +181,30 @@ const FontGenerator = () => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
 
-    ctx.fillStyle = textColor;
-    let x = (canvas.width - totalTextWidth) / 2;
-    const y = canvas.height / 2 + 32;
+    // 计算起始 x 坐标，使文字居中
+    let x = (canvas.width - widths.total) / 2;
+    // 垂直居中，并根据字体大小调整 y 坐标
+    const y = canvas.height / 2 + (baseFontSize * 0.35);
 
-    ctx.font = `${fontsize1}px ${type1.style.fontFamily}`;
+    // 绘制文字
+    ctx.fillStyle = textColor;
+
+    // 绘制第一个字母
+    ctx.font = `${fontSize1}px ${type1.style.fontFamily}`;
     ctx.fillText(firstLetter, x, y);
 
-    x += firstLetterWidth + (firstLetterWidth * 0.1);
-    if (middleLetters.length > 0) {
-      ctx.font = `${fontsize2}px ${type2.style.fontFamily}`;
+    // 绘制中间字母
+    if (middleLetters) {
+      x += widths.width1 + (widths.width1 * 0.1); // 添加一些间距
+      ctx.font = `${fontSize2}px ${type2.style.fontFamily}`;
       ctx.fillText(middleLetters, x, y);
-      x += middleLettersWidth;
+      x += widths.width2;
+    } else {
+      x += widths.width1 + (widths.width1 * 0.1);
     }
 
-    ctx.font = `${fontsize3}px ${type3.style.fontFamily}`;
+    // 绘制最后一个字母
+    ctx.font = `${fontSize3}px ${type3.style.fontFamily}`;
     ctx.fillText(lastLetter, x, y);
 
     setGeneratedImage(canvas.toDataURL('image/png'));
