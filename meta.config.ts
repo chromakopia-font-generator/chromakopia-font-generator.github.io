@@ -16,6 +16,9 @@ export const metaConfig: Metadata = {
     },
     description: siteDescription,
     keywords: "chromakopia font generator, chromakopia name generator, chromakopia text generator, chromakopia pfp, chromakopia tyler, chromakopia truck",
+    verification: {
+        google: "TMVSSmP9xLqFv-zeGFmoFgMGszKnpxqZM-q2gWF6A74",
+    },
     openGraph: {
         title: siteTitle,
         description: siteDescription,
