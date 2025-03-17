@@ -5,7 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { metaConfig } from "@/meta.config";
 import ShareThisScript from "@/components/script/ShareThisScript";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import Plausible from "@/components/script/Plausible";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -29,10 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-WSD3NVG9" />
       <head>
         {/* <MultitagScript /> */}
         {/* <ShareThisScript id="6714816dd01e2b001255260d" /> */}
+        <Plausible />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#f1efe8] `}>
         <div className="flex flex-col min-h-screen">
@@ -43,6 +44,7 @@ export default function RootLayout({
           <Footer />
         </div>
       </body>
+      <GoogleAnalytics gaId="G-TVBNNBC23G" />
     </html>
   );
 }
